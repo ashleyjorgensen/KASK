@@ -1,7 +1,7 @@
 // Import ORM to create functions to interact with the DB
 var orm = require("../config/orm.js");
 
-var datenight_db = {
+var date = {
     all: function(callback) {
       orm.all("datenight_db", function(res) {
         callback(res);
@@ -26,4 +26,4 @@ var datenight_db = {
   };
   
   // Export the database functions for the controller (date_controllers.js).
-  module.exports = datenight_db;
+  module.exports = date;
