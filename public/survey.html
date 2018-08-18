@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <!-- survery script -->
     <script src="https://surveyjs.azureedge.net/1.0.38/survey.jquery.min.js"></script>
@@ -14,14 +15,16 @@
 </head>
 <body>
     <div class="container">
-        <div class="col s12 center-align">
+        <div class="col 12">
         <!-- about me if we want to link a profile to the login -->
             <div class="card-panel left-align white">
                 <h5><strong>Let's Learn About You First</strong></h5>
                 <br>
                 <input id="name" type="text" class="validate" required>
                 <label class='active' for="name">Name (required)</label>
- <div id="surveyContainer"><h5><strong>Questionnaire</strong></h5></div>
+                <br><br>
+ <div id="surveyContainer"></div>
+ <script type="text/javascript" src="./assets/js/survey.js"></script>
             </div>
         </div>
     </div>
