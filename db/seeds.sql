@@ -1,15 +1,12 @@
 
-INSERT INTO dates (date_name, date_complete) VALUES ('');
-INSERT INTO dates (date_name, date_complete) VALUES ('');
-INSERT INTO dates (date_name, date_complete) VALUES ('');
-INSERT INTO dates (date_name, date_complete) VALUES ('');
-INSERT INTO dates (date_name, date_complete) VALUES ('');
-INSERT INTO dates (date_name, date_complete) VALUES ('');
-INSERT INTO dates (date_name, date_complete) VALUES ('');
-INSERT INTO dates (date_name, date_complete) VALUES ('');
-INSERT INTO dates (date_name, date_complete) VALUES ('');
-INSERT INTO dates (date_name, date_complete) VALUES ('');
-INSERT INTO dates (date_name, date_complete) VALUES ('');
+INSERT INTO dates (date_name, date_complete) VALUES ('Hiking');
+INSERT INTO dates (date_name, date_complete) VALUES ('Build a Fort');
+INSERT INTO dates (date_name, date_complete) VALUES ('Dancing');
+INSERT INTO dates (date_name, date_complete) VALUES ('Italian');
+INSERT INTO dates (date_name, date_complete) VALUES ('Fishing');
+INSERT INTO dates (date_name, date_complete) VALUES ('Bike Riding');
+INSERT INTO dates (date_name, date_complete) VALUES ('Zoo');
+INSERT INTO dates (date_name, date_complete) VALUES ('Thai');
 
 
 
