@@ -27,7 +27,6 @@ router.post("/api/dates", function(req, res){
         res.json({ id: result.insertId });
     });
 });
-
 //creating an api route for the login
 router.post("/api/login", function(req, res){
     //create a variable for the username
@@ -52,5 +51,6 @@ router.post("/api/login", function(req, res){
         }
     })
 })
+
 
 module.exports = router;
