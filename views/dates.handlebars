@@ -5,7 +5,7 @@
 <div class="row">
 <div class = "col s6'>
 {{#each dates}}
-{{#unless this.save_date}}
+{{#unless this.date_comlpete}}
 <div>
 <form action = "/dates/{{this.id}}?_method = PUT" method = "POST">
 <button type = "submit" id = "newDates"> {{this.date_name}} </button>

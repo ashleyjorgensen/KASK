@@ -159,8 +159,19 @@ function sendDataToServer(survey) {
     alert("The results are:" + JSON.stringify(survey.data));
 }
 
+
+
 var survey = new Survey.Model(surveyJSON);
 $("#surveyContainer").Survey({
     model: survey,
     onComplete: sendDataToServer
+});
+survey.onValidateQuestion.add(function(survey, options){
+    //the questions
+    if(options.name === "question1", "question2", "question3", "question4") {
+      if(options.value && options.value.length > 2) {
+        //Set the error
+        options.error = "Please select maximum two values"; 
+      }
+    }
 });

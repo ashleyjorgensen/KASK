@@ -1,7 +1,20 @@
-{{!-- needed to decline the date idea --}}
 <li>
-    {{name}}
-    <button class="declineDate" data-id="{{id}}" data-newDate="{{dates}}">
-    </button>
-    <button class="rejectDate" data-id="{{this.id}}">Reject Date</button>
+        <div class="container">
+        <div class="col 12">
+        <!-- about me if we want to link a profile to the login -->
+            <div class="card-panel left-align white">
+                <h5><strong>Let's Learn About You First</strong></h5>
+                <br>
+                <input id="name" type="text" class="validate" required>
+                <label class='active' for="name">Name (required)</label>
+                <br><br><br>
+                <h4><strong>Dating Questionnaire</strong></h4>
+                <h5>Please select two options from each question.</h5>
+                <br><br>
+            
+ <div id="surveyContainer"></div>
+ <script type="text/javascript" src="./assets/js/survey.js"></script>
+            </div>
+        </div>
+    </div>
 </li>
