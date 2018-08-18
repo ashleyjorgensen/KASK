@@ -27,5 +27,30 @@ router.post("/api/dates", function(req, res){
         res.json({ id: result.insertId });
     });
 });
+//creating an api route for the login
+router.post("/api/login", function(req, res){
+    //create a variable for the username
+    var uname = req.body.uname;
+
+    db.DateTable.find({
+        where: {
+            loginTable: uname
+        }
+    }).then(function(results){
+        if(results.length == 0){
+            //the username is not in the database
+
+            res.json(false);
+        }else {
+            //the username was found in the database
+            // res.redirect("/desiredRoute");
+
+            // res.json("SEND WHAT YOU WANT TO SEND BACK");
+
+            res.json(true)
+        }
+    })
+})
+
 
 module.exports = router;
