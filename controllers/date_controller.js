@@ -5,12 +5,27 @@ var express = require("express");
 var router = express.Router();
 
 // Importing the burgers.js to use DB functions
-var burgers = require("../models/date.js")
+var date = require("../models/date.js")
 
 // Setting up the router functions to connect to our app
 router.get("/", function (req, res) {
-    burgers.all(function (burger_data) {
-        console.log(burger_data);
-        res.render("index",{burger_data});
-    })
-})
+    date.all(function (result) {
+        var hbsObject = {
+            date: result
+        };
+        console.log(result);
+        res.render("index",hbsObject);
+    });
+});
+
+router.post("/api/dates", function(req, res){ 
+    date.create([
+        "date_name" , "date_complete"
+    ], [
+        req.body.date_name, req.body.date_complete
+    ], function(result) {
+        res.json({ id: result.insertId });
+    });
+});
+
+module.exports = router;
