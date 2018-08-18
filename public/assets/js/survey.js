@@ -1,3 +1,4 @@
+
 var surveyJSON =
 {
     pages: [{
@@ -160,12 +161,13 @@ function sendDataToServer(survey) {
 }
 
 
-
 var survey = new Survey.Model(surveyJSON);
+console.log(survey);
 $("#surveyContainer").Survey({
     model: survey,
     onComplete: sendDataToServer
 });
+
 survey.onValidateQuestion.add(function(survey, options){
     //the questions
     if(options.name === "question1", "question2", "question3", "question4") {

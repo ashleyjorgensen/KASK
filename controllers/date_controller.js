@@ -1,6 +1,5 @@
 // Require express
 var express = require("express");
-
 // Setting up express router connection
 var router = express.Router();
 
@@ -14,7 +13,7 @@ router.get("/", function (req, res) {
             date: result
         };
         console.log(result);
-        res.render("index",hbsObject);
+        res.render("dates",{});
     });
 });
 
