@@ -20,9 +20,9 @@ router.get("/", function (req, res) {
 
 router.post("/api/dates", function(req, res){ 
     date.create([
-        "date_name" , "save_date"
+        "date_name" , "date_complete"
     ], [
-        req.body.date_name, req.body.save_date
+        req.body.date_name, req.body.date_complete
     ], function(result) {
         res.json({ id: result.insertId });
     });
