@@ -3,7 +3,7 @@ var orm = require("../config/orm.js");
 
 var date = {
     all: function(callback) {
-      orm.all("datenight_db", function(res) {
+      orm.all("dates", function(res) {
         callback(res);
       });
     },

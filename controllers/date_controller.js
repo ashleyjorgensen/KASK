@@ -9,12 +9,12 @@ var date = require("../models/date.js")
 
 // Setting up the router functions to connect to our app
 router.get("/", function (req, res) {
-    date.all(function (datenight_data) {
+    date.all(function (result) {
         var hbsObject = {
-            date: datenight_data
+            date: result
         };
-        console.log(datenight_data);
-        res.render("index",{datenight_data});
+        console.log(result);
+        res.render("index",hbsObject);
     });
 });
 
@@ -28,4 +28,4 @@ router.post("/api/dates", function(req, res){
     });
 });
 
-module.export = router;
+module.exports = router;
