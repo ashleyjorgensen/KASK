@@ -10,25 +10,25 @@ var surveyJSON =
                 title: "Which two outdoor activies appeal to you the most?",
                 choices:
                     [{
-                        text: "Hiking"
+                        value: "Hiking"
                     }, {
-                        text: "Kayaking"
+                        value: "Kayaking"
                     }, {
-                        text: "Fishing"
+                        value: "Fishing"
                     }, {
-                        text: "Walk in the Park"
+                        value: "Walk in the Park"
                     }, {
-                        text: "Paddle Boarding"
+                        value: "Paddle Boarding"
                     }, {
-                        text: "Star Gazing"
+                        value: "Star Gazing"
                     }, {
-                        text: "Bike Riding"
+                        value: "Bike Riding"
                     }, {
-                        text: "Miniature Golf"
+                        value: "Miniature Golf"
                     }, {
-                        text: "Rock Climbing"
+                        value: "Rock Climbing"
                     }, {
-                        text: "Basketball"
+                        value: "Basketball"
                     }],
                 choicesOrder: "asc", colCount: 2
     
@@ -39,25 +39,25 @@ var surveyJSON =
                 title: "Which two staying in activies appeal to you the most?",
                 choices:
                     [{
-                        text: "Movie Night"
+                        value: "Movie Night"
                     }, {
-                        text: "Build a Fort"
+                        value: "Build a Fort"
                     }, {
-                        text: "Board Game Night"
+                        value: "Board Game Night"
                     }, {
-                        text: "Cook Together"
+                        value: "Cook Together"
                     }, {
-                        text: "Card Game"
+                        value: "Card Game"
                     }, {
-                        text: "Fondue Night"
+                        value: "Fondue Night"
                     }, {
-                        text: "Bake Together"
+                        value: "Bake Together"
                     }, {
-                        text: "Puzzles"
+                        value: "Puzzles"
                     }, {
-                        text: "Reminisce Old Photos"
+                        value: "Reminisce Old Photos"
                     }, {
-                        text: "Drinking Games"
+                        value: "Drinking Games"
                     }],
                 choicesOrder: "asc", colCount: 2
     }, {
@@ -67,25 +67,25 @@ var surveyJSON =
                 title: "Which two going out activies appeal to you the most?",
                 choices:
                     [{
-                        text: "Dancing"
+                        value: "Dancing"
                     }, {
-                        text: "Bar Hopping"
+                        value: "Bar Hopping"
                     }, {
-                        text: "Concert"
+                        value: "Concert"
                     }, {
-                        text: "Zoo"
+                        value: "Zoo"
                     }, {
-                     text: "Aquariam"
+                     value: "Aquariam"
                     }, {
-                        text: "Day Trip"
+                        value: "Day Trip"
                     }, {
-                         text: "Clubbing"
+                         value: "Clubbing"
                     }, {
-                        text: "Botanical Garden"
+                        value: "Botanical Garden"
                     }, {
-                         text: "Restaurant "
+                         value: "Restaurant "
                     }, {
-                         text: "Aerial Yoga"
+                         value: "Aerial Yoga"
                     }], choicesOrder: "asc", colCount: 2
 
     }, {
@@ -95,25 +95,25 @@ var surveyJSON =
                 title: "Which two types of food appeal to you the most?",
                 choices:
                     [{
-                        text: "Italian"
+                        value: "Italian"
                     }, {
-                        text: "Mexican"
+                        value: "Mexican"
                     }, {
-                        text: "Hawaiian"
+                        value: "Hawaiian"
                     }, {
-                         text: "Mongolion"
+                         value: "Mongolion"
                     }, {
-                         text: "Chinse"
+                         value: "Chinse"
                     }, {
-                         text: "Thai"
+                         value: "Thai"
                     }, {
-                        text: "Western"
+                        value: "Western"
                     }, {
-                        text: "German"
+                        value: "German"
                     }, {
-                         text: "Bar Food"
+                         value: "Bar Food"
                     }, {
-                        text: "Seafood"
+                        value: "Seafood"
                     }], choicesOrder: "asc", colCount: 2
             }]
     }]
@@ -140,4 +140,10 @@ survey.onValidateQuestion.add(function(survey, options){
         options.error = "Please select maximum two values"; 
       }
     }
+});
+
+survey.onComplete.add(function (sender) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", date_name);
+    xhr.send(JSON.stringify(sender.data));
 });
