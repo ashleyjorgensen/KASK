@@ -1,11 +1,15 @@
+
 // Dependencies
+
+// =============================================================
+
+var express = require("express");
+var bodyParser = require("body-parser");
 
 const express = require("express");
 const bodyParser = require("body-parser");
 
 const PORT = process.env.PORT || 8080;
-
-const app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
@@ -19,13 +23,16 @@ app.use(bodyParser.json());
 // Require handlebars
 const exphbs = require("express-handlebars");
 
+
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+
 
 // Import routes and give the server access to them.
 const routes = require("./controllers/date_controller.js");
 require("./models/date.js")(app);
 require("./models/html-routes.js")(app);
+
 app.use(routes);
 
 
