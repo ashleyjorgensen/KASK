@@ -1,3 +1,4 @@
+var mysql = require('mysql');
 
 var surveyJSON =
 {
@@ -101,7 +102,7 @@ var surveyJSON =
                     }, {
                         value: "Hawaiian"
                     }, {
-                         value: "Mongolion"
+                         value: "Mongolian"
                     }, {
                          value: "Chinse"
                     }, {
@@ -146,4 +147,10 @@ survey.onComplete.add(function (sender) {
     var xhr = new XMLHttpRequest();
     xhr.open("POST", date_name);
     xhr.send(JSON.stringify(sender.data));
+    var sql = "INSERT INTO dates (question1, question2, question3, question4) VALUES ?";
+    var values = survey.data;
+    con.query(sql, [values], function (err, result) {
+        if (err) throw err;
+        console.log("survey results" + results);
+    });
 });

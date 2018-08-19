@@ -7,7 +7,10 @@ USE datenight_db;
 CREATE TABLE dates
 (
 	id int(11) NOT NULL AUTO_INCREMENT,
-	date_name varchar(255) NOT NULL,
+	question1 varchar(255) NOT NULL,
+	question2 varchar(255) NOT NULL,
+	question3 varchar(255) NOT NULL,
+	question4 varchar(255) NOT NULL,
     date_complete BOOLEAN DEFAULT false,
 	PRIMARY KEY (id)
 );
