@@ -1,1 +1,21 @@
 <h1>Datenight!</h1>
+
+<main>
+<div class="container">
+<div class="row">
+<div class = "col s6">
+{{#each dates}}
+{{!-- {{#unless this.save_date = false}} --}}
+<div>
+{{!-- <form action = "/dates/{{this.id}}?_method = PUT" method = "POST">
+<button type = "submit" id = "newDates"> {{this.date_name}} </button>
+</form> --}}
+</div>
+{{!-- {{/unless}} --}}
+{{/each}}
+</div>
+<li>
+    {{name}}
+
+    <button class="Submit" href="/results"id="submitName">Submit</button>
+</li>
