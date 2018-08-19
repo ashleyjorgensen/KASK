@@ -1,29 +1,23 @@
-// Import ORM to create functions to interact with the DB
-var orm = require("../config/orm.js");
-
-var date = {
-    all: function(callback) {
-      orm.all("dates", function(res) {
-        callback(res);
-      });
+module.exports = function(sequelize, DataTypes) {
+  var Post = sequelize.define("Post", {
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
     },
-    // The variables cols and vals are arrays.
-    create: function(cols, vals, callback) {
-      orm.create("datenight_db", cols, vals, function(res) {
-        callback(res);
-      });
+    body: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
     },
-    update: function(objColVals, condition, callback) {
-      orm.update("datenight_db", objColVals, condition, function(res) {
-        callback(res);
-      });
-    },
-    delete: function(condition, callback) {
-      orm.delete("datenight_db", condition, function(res) {
-        callback(res);
-      });
+    category: {
+      type: DataTypes.STRING,
+      defaultValue: "Personal"
     }
-  };
-  
-  // Export the database functions for the controller (date_controllers.js).
-  module.exports = date;
+  });
+  return Post;
+};

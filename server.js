@@ -24,7 +24,8 @@ app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
 const routes = require("./controllers/date_controller.js");
-
+require("./models/date.js")(app);
+require("./models/html-routes.js")(app);
 app.use(routes);
 
 

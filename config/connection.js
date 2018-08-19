@@ -12,7 +12,7 @@ var connection = mysql.createConnection({
   user: "root",
 
   // Password
-  password: "rootroot",
+  password: "Metallica",
   database: "datenight_db"
 });
 
@@ -24,6 +24,3 @@ connection.connect(function (err) {
 
 module.exports = connection;
 
-
-// passpport fb authentication
-// https://github.com/jaredhanson/passport-facebook#readme
