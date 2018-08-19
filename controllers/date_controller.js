@@ -1,6 +1,5 @@
 // Require express
 var express = require("express");
-
 // Setting up express router connection
 var router = express.Router();
 
@@ -8,13 +7,13 @@ var router = express.Router();
 var date = require("../models/date.js")
 
 // Setting up the router functions to connect to our app
-router.get("/", function (req, res) {
+router.get("/survey", function (req, res) {
     date.all(function (result) {
-        var hbsObject = {
-            date: result
-        };
+        // var hbsObject = {
+        //     date: result
+        // };
         console.log(result);
-        res.render("index",hbsObject);
+        res.render("dates",{});
     });
 });
 
@@ -28,4 +27,4 @@ router.post("/api/dates", function(req, res){
     });
 });
 
-module.exports = router;
+// module.exports = router;
