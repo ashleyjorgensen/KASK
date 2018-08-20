@@ -1,4 +1,4 @@
-<h1>Datenight!</h1>
+{{!-- <h1>Datenight!</h1>
 
 <main>
 <div class="container">
@@ -6,16 +6,39 @@
 <div class = "col s6">
 {{#each dates}}
 {{!-- {{#unless this.save_date = false}} --}}
-<div>
+{{!-- <div> --}}
 {{!-- <form action = "/dates/{{this.id}}?_method = PUT" method = "POST">
 <button type = "submit" id = "newDates"> {{this.date_name}} </button>
 </form> --}}
-</div>
+{{!-- </div> --}}
 {{!-- {{/unless}} --}}
-{{/each}}
-</div>
-<li>
+{{!-- {{/each}} --}}
+{{!-- </div> --}} 
+<h2>Login to DateNight</h2>
+{{!-- <form class= "login-form" > --}}
+{{!-- action="/action_page.php"> --}}
+  <div class="imgcontainer">
+    {{!-- <img src="img_avatar2.png" alt="photo" class="avatar"> --}}
+  </div>
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" id="username" required>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" id="psw" required>
+         <button class="Submit" id="submitName">Submit</button>
+    {{!-- <button id="submit-form" type="submit">Login</button> --}}
+   
+  </div>
+ 
+{{!-- </form> --}}
+ <script>
+		 console.log("testing index");
+	 </script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="./assets/js/index.js">"hi"</script>
+
+{{!-- <li>
     {{name}}
 
     <button class="Submit" href="/results"id="submitName">Submit</button>
-</li>
+</li> --}}

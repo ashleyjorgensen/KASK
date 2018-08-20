@@ -1,25 +1,77 @@
 module.exports = function(sequelize, DataTypes) {
-  var date = sequelize.define("Post", {
-    title: {
+  var dates = sequelize.define("dates", {
+    username: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
       validate: {
         len: [1]
       }
     },
-    body: {
-      type: DataTypes.TEXT,
-      allowNull: false,
+    password: {
+      type: DataTypes.STRING,
+      // allowNull: false,
       validate: {
         len: [1]
       }
     },
-    category: {
+    answer1: {
       type: DataTypes.STRING,
-      defaultValue: "Personal"
+      // allowNull: false,
+      validate: {
+        len: [1]
     }
+    },
+      answer2: {
+      type: DataTypes.STRING,
+      // allowNull: false,
+      validate: {
+        len: [1]
+    }
+    },
+        answer3: {
+      type: DataTypes.STRING,
+      // allowNull: false,
+      validate: {
+        len: [1]
+    }
+    },
+        answer4: {
+      type: DataTypes.STRING,
+      // allowNull: false,
+      validate: {
+        len: [1]
+    }
+    },
+        answer5: {
+      type: DataTypes.STRING,
+      // allowNull: false,
+      validate: {
+        len: [1]
+    }
+    },
+        answer6: {
+      type: DataTypes.STRING,
+      // allowNull: false,
+      validate: {
+        len: [1]
+    }
+    },
+        answer7: {
+      type: DataTypes.STRING,
+      // allowNull: false,
+      validate: {
+        len: [1]
+    }
+    },
+        answer8: {
+      type: DataTypes.STRING,
+      // allowNull: false,
+      validate: {
+        len: [1]
+    }
+    },
   });
-  return date;
+  return dates;
   };
 // Import ORM to create functions to interact with the DB
 // var orm = require("../config/orm.js");

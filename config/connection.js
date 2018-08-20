@@ -1,26 +1,26 @@
-// Dependencies
-var mysql = require('mysql');
+// // Dependencies
+// var mysql = require('mysql');
 
-// Setup connection to the mysql server 
-var connection = mysql.createConnection({
-  host: "localhost",
+// // Setup connection to the mysql server 
+// var connection = mysql.createConnection({
+//   host: "localhost",
 
-  // Port; if not 3306
-  port: 3306,
+//   // Port; if not 3306
+//   port: 3306,
 
-  // Username
-  user: "root",
+//   // Username
+//   user: "root",
 
-  // Password
-  password: "Metallica",
-  database: "datenight_db"
-});
+//   // Password
+//   password: "Metallica",
+//   database: "datenight_db"
+// });
 
-// Connection to run functions/program 
-connection.connect(function (err) {
-  if (err) throw err;
-  console.log("connected as id " + connection.threadId);
-});
+// // Connection to run functions/program 
+// connection.connect(function (err) {
+//   if (err) throw err;
+//   console.log("connected as id " + connection.threadId);
+// });
 
-module.exports = connection;
+// module.exports = connection;
 
