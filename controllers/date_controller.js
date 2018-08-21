@@ -27,11 +27,6 @@ router.post("/api/dates", function(req, res){
         res.json({ id: result.insertId });
     });
 });
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 1377efc910646c7dee2e77485871c1b3fa5bcefc
 //creating an api route for the login
 router.post("/api/login", function(req, res){
     //create a variable for the username
