@@ -61,6 +61,8 @@ module.exports = function(app) {
       });
   });
 
+
+
   // // DELETE route for deleting posts
   // app.delete("/api/posts/:id", function(req, res) {
   //   db.dates.destroy({

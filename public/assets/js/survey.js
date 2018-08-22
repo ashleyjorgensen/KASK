@@ -70,3 +70,33 @@ survey.onValidateQuestion.add(function(survey, options){
       }
     }
 });
+
+$(document).on('click', "#submitSurvey", submitSurvey);
+
+function submitSurvey(){
+    let newSurvey = {
+        answer1:$(answer1),
+        answer2:$(answer2),
+        answer3:$(answer3),
+        answer4:$(answer4),
+        answer5:$(answer5),
+        answer6:$(answer6),
+        answer7:$(answer7),
+        answer8:$(answer8),
+    };
+  // Sending survey data to DB
+  app.post("/api/dates", newSurvey, function (req, res) {
+
+    db.dates.create({
+      answer1: req.survey.data,
+      answer2: req.survey.data,
+      answer3: req.survey.data,
+      answer4: req.survey.data,
+      answer5: req.survey.data,
+      answer6: req.survey.data,
+      answer7: req.survey.data,
+      answer8: req.survey.data,
+    });
+
+  });
+};

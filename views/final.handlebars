@@ -5,13 +5,15 @@
         <script src='./assets/js/Winwheel.js'></script>
     </head>
     <body>
+        <h1>Spin The Wheel!</h1>
         <canvas id='canvas' width='800' height='400'>
         </canvas>
         <script>
             var theWheel = new Winwheel();
         </script>
  <br>
-    Press the Spin Button and See what Activity you sohould go on.
+
+   <span id="spinit"> Click Spin and let DateNight decide your date!</span><br><br>
 </canvas>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
  
@@ -76,6 +78,6 @@
  
 </script>
 
-<button onClick="myWheel.startAnimation();">Spin the Wheel</button>
+<button id="spinning"onClick="myWheel.startAnimation();">Spin!</button>
     </body>
 </html>
