@@ -1,16 +1,5 @@
 
-INSERT INTO dates (question1, date_complete) VALUES ('Hiking', 'Kayaking');
-INSERT INTO dates (question2, date_complete) VALUES ('Build a Fort', 'Fondue Night');
-INSERT INTO dates (question3, date_complete) VALUES ('Dancing', 'Aerial Yoga');
-INSERT INTO dates (question4, date_complete) VALUES ('Italian', 'Bar Food');
-INSERT INTO dates (question1, date_complete) VALUES ('Fishing', 'Basketball');
-INSERT INTO dates (question2, date_complete) VALUES ('Star Gazing', 'Rock Climbing');
-INSERT INTO dates (question3, date_complete) VALUES ('Zoo', 'Mueseum');
-INSERT INTO dates (question4, date_complete) VALUES ('Thai', 'Mongolian');
-
-
-
-INSERT INTO user (username, user_password) VALUES ('Stefani', 'Stefani');
-INSERT INTO user (username, user_password) VALUES ('Katri', 'Katri');
-INSERT INTO user (username, user_password) VALUES ('Ashley', 'Ashley');
-INSERT INTO user (username, user_password) VALUES ('Keith', 'Keith');
+INSERT INTO dates (username, password, answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8) VALUES ("ashley", "aj", "hiking" , "bike riding", "fishing", "cooking together", "board game night", "drinking games", "day trip", "mexican");
+INSERT INTO dates (username, password, answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8)  VALUES ("keith", "kj", "fishing", "basketball", "kayaking", "drinking games", "card game", "concert", "bar hopping", "bar food");
+INSERT INTO dates (username, password, answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8)  VALUES ("katri", "kmg", "star gazing", "paddle boarding", "build a fort", "puzzles", "fondue night", "clubbing", "concert", "thai");
+INSERT INTO dates (username, password, answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8) VALUES ("stefani", "sf" , "miniature golf", "rock climbing", "bake together", "card game", "drinking games", "concert", "day trip", "italian");

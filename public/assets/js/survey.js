@@ -1,4 +1,3 @@
-// var mysql = require('mysql');
 
 var surveyJSON =
 {
@@ -10,27 +9,7 @@ var surveyJSON =
                 name: "question1",
                 title: "Which two outdoor activies appeal to you the most?",
                 choices:
-                    [{
-                        value: "Hiking"
-                    }, {
-                        value: "Kayaking"
-                    }, {
-                        value: "Fishing"
-                    }, {
-                        value: "Walk in the Park"
-                    }, {
-                        value: "Paddle Boarding"
-                    }, {
-                        value: "Star Gazing"
-                    }, {
-                        value: "Bike Riding"
-                    }, {
-                        value: "Miniature Golf"
-                    }, {
-                        value: "Rock Climbing"
-                    }, {
-                        value: "Basketball"
-                    }],
+                    [ "Hiking","Kayaking","Fishing","Walk in the Park","Paddle Boarding","Star Gazing","Bike Riding","Miniature Golf","Rock Climbing","Basketball"],
                 choicesOrder: "asc", colCount: 2
     
         }, {
@@ -39,27 +18,7 @@ var surveyJSON =
                 name: "question2",
                 title: "Which two staying in activies appeal to you the most?",
                 choices:
-                    [{
-                        value: "Movie Night"
-                    }, {
-                        value: "Build a Fort"
-                    }, {
-                        value: "Board Game Night"
-                    }, {
-                        value: "Cook Together"
-                    }, {
-                        value: "Card Game"
-                    }, {
-                        value: "Fondue Night"
-                    }, {
-                        value: "Bake Together"
-                    }, {
-                        value: "Puzzles"
-                    }, {
-                        value: "Reminisce Old Photos"
-                    }, {
-                        value: "Drinking Games"
-                    }],
+                    ["Movie Night", "Build a Fort", "Board Game Night","Cook Together","Card Game","Fondue Night","Bake Together","Puzzles","Reminisce Old Photos","Drinking Games"],
                 choicesOrder: "asc", colCount: 2
     }, {
 
@@ -67,27 +26,8 @@ var surveyJSON =
                 name: "question3",
                 title: "Which two going out activies appeal to you the most?",
                 choices:
-                    [{
-                        value: "Dancing"
-                    }, {
-                        value: "Bar Hopping"
-                    }, {
-                        value: "Concert"
-                    }, {
-                        value: "Zoo"
-                    }, {
-                     value: "Aquariam"
-                    }, {
-                        value: "Day Trip"
-                    }, {
-                         value: "Clubbing"
-                    }, {
-                        value: "Botanical Garden"
-                    }, {
-                         value: "Restaurant "
-                    }, {
-                         value: "Aerial Yoga"
-                    }], choicesOrder: "asc", colCount: 2
+                    ["Dancing", "Bar Hopping","Concert","Zoo","Aquariam", "Day Trip","Clubbing","Botanical Garden","Restaurant","Aerial Yoga"], 
+                    choicesOrder: "asc", colCount: 2
 
     }, {
 
@@ -95,27 +35,8 @@ var surveyJSON =
                 name: "question4",
                 title: "Which two types of food appeal to you the most?",
                 choices:
-                    [{
-                        value: "Italian"
-                    }, {
-                        value: "Mexican"
-                    }, {
-                        value: "Hawaiian"
-                    }, {
-                         value: "Mongolian"
-                    }, {
-                         value: "Chinse"
-                    }, {
-                         value: "Thai"
-                    }, {
-                        value: "Western"
-                    }, {
-                        value: "German"
-                    }, {
-                         value: "Bar Food"
-                    }, {
-                        value: "Seafood"
-                    }], choicesOrder: "asc", colCount: 2
+                    [ "Italian","Mexican","Hawaiian","Mongolion","Chiense", "Thai", "Western","German","Bar Food", "Seafood"], 
+                    choicesOrder: "asc", colCount: 2
             }]
     }]
 }
@@ -124,7 +45,11 @@ function sendDataToServer(survey) {
     //send Ajax request to your web server.
     alert("The results are:" + JSON.stringify(survey.data));
 }
-
+$(document).on("click", "#newDates", submitSelections);
+function submitSelections(){
+   window.location.href = "/results" ;
+   console.log("working");
+};
 
 var survey = new Survey.Model(surveyJSON);
 console.log(survey);
@@ -139,18 +64,9 @@ survey.onValidateQuestion.add(function(survey, options){
       if(options.value && options.value.length > 2) {
         //Set the error
         options.error = "Please select maximum two values"; 
+      console.log(options.name);
+      console.log(options.value);
+      console.log(options.value.length);
       }
     }
-});
-
-survey.onComplete.add(function (sender) {
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", date_name);
-    xhr.send(JSON.stringify(sender.data));
-    var sql = "INSERT INTO dates (question1, question2, question3, question4) VALUES ?";
-    var values = survey.data;
-    con.query(sql, [values], function (err, result) {
-        if (err) throw err;
-        console.log("survey results" + results);
-    });
 });
