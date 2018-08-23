@@ -4,12 +4,16 @@ html {
     background-image: url(../images/background2.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
+    color: #c94c4c
 }
 
-#surverycontainer {
-    width: 100%;
-    height: 100%;
+#quiz {
+    width: 700%;
+    padding: 5%;
+    border: 5px solid #f2e6d9;
+    background: #f9f2ec;
+    margin: 2%;
 }
 /* getting rid of survey library button */
 .sv_complete_btn {
@@ -25,7 +29,7 @@ html {
 h1 {
     font-family: 'Great Vibes', cursive;
     font-size: 87px;
-    color: #ef4abe;
+    color: #b2b2b2;
     margin-top: .5%;
 }
 
@@ -39,4 +43,13 @@ h1 {
 }
 #spinning {
     margin-left: 40%;
+}
+#username,
+#psw{
+    color: #bc5a45
+}
+.two {
+    color: #eea29a;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 24px;
 }
