@@ -5,7 +5,24 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     color: #c94c4c
+}
+
+#login {
+    margin-left: 30%;
+    margin-top: 10%;
+    color: #ffbce9;
+    text-shadow: 2px 2px #000000;
+}
+
+.logBtn {
+    border-radius: 25px;
+    padding: 7px; 
+    width: 7%;
+    height: 5%; 
+    background: #efe3cb;
+    border: 0px;
 }
 
 #quiz {
@@ -24,6 +41,15 @@ html {
 /* our actual button */
 #newDates {
     margin-bottom: 1%;
+    border-radius: 25px;
+    padding: 12px; 
+    width: 14%;
+    height: 12%; 
+    background: #efe3cb;
+    border: 0px;
+    font-size: 36px;
+    font-family: 'Great Vibes', cursive;
+    margin-left: 40%;
 }
 
 h1 {
@@ -34,22 +60,37 @@ h1 {
 }
 
 #spinit {
-    font-size: 18px;
-    font-weight: 500
-}
-
-#spinit {
+    font-size: 28px;
+    font-weight: 500;
     margin-left: 30%;
+    color: #ffbce9;;
+    margin-top: 10%;
+    text-shadow: 2px 2px #000000;
+
 }
 #spinning {
-    margin-left: 40%;
+    margin-left: 42%;
+    margin-bottom: 1%;
+    border-radius: 25px;
+    padding: 12px; 
+    width: 12%;
+    height: 12%; 
+    background: #efe3cb;
+    border: 0px;
+    font-size: 36px;
+    font-family: 'Great Vibes', cursive;
+
 }
-#username,
-#psw{
-    color: #bc5a45
+
+.spinContainer{
+    margin-top:5%;
 }
 .two {
     color: #eea29a;
     font-family: 'Shadows Into Light', cursive;
     font-size: 24px;
+}
+
+#canvas {
+    margin-left: 20%;
 }

@@ -1,4 +1,3 @@
-
 var surveyJSON =
 {
     pages: [{
@@ -44,6 +43,17 @@ var surveyJSON =
 function sendDataToServer(survey) {
     //send Ajax request to your web server.
     alert("The results are:" + JSON.stringify(survey.data));
+    // console.log(survey.data.question1[0]);
+    var Q1A1=survey.data.question1[0] ;
+    var Q1A2=survey.data.question1[1] ;
+    var Q2A1=survey.data.question2[0] ;
+    var Q2A2=survey.data.question2[1] ;
+    var Q3A1= survey.data.question3[0];
+    var Q3A2= survey.data.question3[1];
+    var Q4A1= survey.data.question4[0];
+    var Q4A2= survey.data.question4[1];
+
+    console.log("Answer1" + Q1A1,"Answer2" + Q1A2,"Answer3" + Q2A1,"Answer4" + Q2A2,"Answer5" + Q3A1,"Answer6" + Q3A2,"Answer7" + Q4A1,"Answer8" + Q4A2);
 }
 $(document).on("click", "#newDates", submitSelections);
 function submitSelections(){
@@ -70,24 +80,3 @@ survey.onValidateQuestion.add(function(survey, options){
       }
     }
 });
-
-$(document).on('click', "#submitSurvey", submitSurvey);
-
-function submitSurvey(){
-    let newSurvey = {
-        answer1:$(answer1),
-        answer2:$(answer2),
-        answer3:$(answer3),
-        answer4:$(answer4),
-        answer5:$(answer5),
-        answer6:$(answer6),
-        answer7:$(answer7),
-        answer8:$(answer8),
-    };
-
-$.post("/api/dates", newSurvey)
-.then(function(data){
-    console.log(data);
-})
-};
-

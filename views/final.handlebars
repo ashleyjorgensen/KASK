@@ -13,24 +13,24 @@
         </script>
  <br>
 
-   <span id="spinit"> Click Spin and let DateNight decide your date!</span><br><br>
+
 </canvas>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
- 
 <script>
+
     var myWheel = new Winwheel({
         'numSegments'    : 8,
         'outerRadius'    : 170,
         'segments'       :
         [
-           {'fillStyle' : '#eae56f', 'text' : 'Activity 1'},
-           {'fillStyle' : '#89f26e', 'text' : 'Activity 2'},
-           {'fillStyle' : '#7de6ef', 'text' : 'Activity 3'},
-           {'fillStyle' : '#e7706f', 'text' : 'Activity 4'},
-           {'fillStyle' : '#eae56f', 'text' : 'Activity 5'},
-           {'fillStyle' : '#89f26e', 'text' : 'Activity 6'},
-           {'fillStyle' : '#7de6ef', 'text' : 'Activity 7'},
-           {'fillStyle' : '#e7706f', 'text' : 'Activity 8'}
+           {'fillStyle' : '#eac8af', 'text' : 'Activity 1'},
+           {'fillStyle' : '#edbcff', 'text' : 'Activity 2'},
+           {'fillStyle' : '#eaafaf', 'text' : 'Activity 3'},
+           {'fillStyle' : '#ffb5c7', 'text' : 'Activity 4'},
+           {'fillStyle' : '#eac8af', 'text' : 'Activity 5'},
+           {'fillStyle' : '#edbcff', 'text' : 'Activity 6'},
+           {'fillStyle' : '#eaafaf', 'text' : 'Activity 7'},
+           {'fillStyle' : '#ffb5c7', 'text' : 'Activity 8'}
         ],
         'animation' :
         {
@@ -53,7 +53,7 @@
         var activitySegment = myWheel.getIndicatedSegment();
  
         // Basic alert of the segment text which is the prize name.
-        alert("The Activity you should go on is " + activitySegment.text + "!");
+        alert("DateNight picked"+" " + activitySegment.text + " "+ "for you!");
     }
  
     // Function to draw pointer using code (like in a previous tutorial).
@@ -64,8 +64,8 @@
         // Get the canvas context the wheel uses.
         var ctx = myWheel.ctx;
  
-        ctx.strokeStyle = 'navy';     // Set line colour.
-        ctx.fillStyle   = 'black';     // Set fill colour.
+        ctx.strokeStyle = 'pink';     // Set line colour.
+        ctx.fillStyle   = 'lightgrey';     // Set fill colour.
         ctx.lineWidth   = 2;
         ctx.beginPath();              // Begin path.
         ctx.moveTo(400, 50);           // Move to initial position.
@@ -75,9 +75,11 @@
         ctx.stroke();                 // Complete the path by stroking (draw lines).
         ctx.fill();                   // Then fill.
     }
- 
-</script>
 
+</script>
+<div class="spinContainer">
+   <span id="spinit"> Click Spin and let DateNight decide your date!</span><br><br>
 <button id="spinning"onClick="myWheel.startAnimation();">Spin!</button>
+</div>
     </body>
 </html>

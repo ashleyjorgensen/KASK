@@ -1,45 +1,39 @@
-{{!-- <h1>Datenight!</h1>
+<title>Homepage</title>
 
-<main>
-<div class="container">
-<div class="row">
-<div class = "col s6">
-{{#each dates}}
-{{!-- {{#unless this.save_date = false}} --}}
-{{!-- <div> --}}
-{{!-- <form action = "/dates/{{this.id}}?_method = PUT" method = "POST">
-<button type = "submit" id = "newDates"> {{this.date_name}} </button>
-</form> --}}
-{{!-- </div> --}}
-{{!-- {{/unless}} --}}
-{{!-- {{/each}} --}}
-{{!-- </div> --}} 
-<div id="homepg">
-<h1>Login to DateNight</h1>
-{{!-- <form class= "login-form" > --}}
-{{!-- action="/action_page.php"> --}}
-  <div class="imgcontainer">
-    {{!-- <img src="img_avatar2.png" alt="photo" class="avatar"> --}}
-  </div>
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" id="username" required>
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" id="psw" required>
-         <button class="Submit" id="submitName">Submit</button>
-    {{!-- <button id="submit-form" type="submit">Login</button> --}}
-   
-  </div>
- </div>
-{{!-- </form> --}}
+  <h1>Login to DateNight</h1>
+<div class="container" id="login">
+
+<form class="create-user-form">
+
+  <h2 id="loginInfo">Create New User</h2>
+  <input type="email" placeholder="Email Address" id="create-user-email" required>
+    
+  <input type="password" placeholder="Password" id="create-user-password" required>
+  <button type="submit" id="submit-create-user"class="logBtn" >Submit</button>
+</form>
+<div id="error1">
+<p> </p>
+</div>
+
+
+<form class="sign-in-form">
+  <h2 id="loginInfo"> Sign In</h2>
+  <input type="email" placeholder="Email Address" id="sign-in-email" required>
+  <input type="password" placeholder="Password" id="sign-in-password" required>
+  <button type="submit" id="button-sign-in" class="logBtn"> Submit</button>
+</form>
+<div id="error2">
+<p> </p>
+</div>
+
+<button type="button" id="sign-out">Sign Out</button>
+
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
  <script>
 		 console.log("testing index");
 	 </script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="./assets/js/index.js">"hi"</script>
-
-{{!-- <li>
-    {{name}}
-
-    <button class="Submit" href="/results"id="submitName">Submit</button>
-</li> --}}
