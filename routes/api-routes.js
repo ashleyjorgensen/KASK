@@ -49,16 +49,16 @@ module.exports = function(app) {
 
     console.log(req.body);
 
-    // db.dates.create({
-    //   username: req.body.text,
-    //   password: req.body.password,
+    db.dates.create({
+      username: req.body.text,
+      password: req.body.password,
       
-    // })
+    })
     
-    //   .then(function(dbdates) {
-    //     res.json(dbdates);
+      .then(function(dbdates) {
+        res.json(dbdates);
         
-    //   });
+      });
       
       // Sending survey data to DB
       db.dates.create({
