@@ -2,21 +2,14 @@ module.exports = function (sequelize, DataTypes) {
   var dates = sequelize.define("dates", {
     username: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
       validate: {
         len: [1]
       }
     },
     password: {
       type: DataTypes.STRING,
-      allowNull: true,
-      validate: {
-        len: [1]
-      }
-    },
-    uid: {
-      type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
       validate: {
         len: [1]
       }
@@ -75,11 +68,27 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: true,
       validate: {
         len: [1]
+//       }
+//     },
+//  }, {
+//       freezeTableName: true, // Model tableName will be the same as the model name
+//       timestamps: false
+//   }),
+  
+//   // timestamps: false
+//   // });
+
+//   return dates;
+// };
       }
     },
 
 
-  },{
+  },
+  // {
+  //   freezeTableName: true,
+  // },
+  {
     timestamps:false}
   );
   return dates;
