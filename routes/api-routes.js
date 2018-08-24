@@ -49,18 +49,29 @@ module.exports = function(app) {
 
     console.log(req.body);
 
-    db.dates.create({
-      username: req.body.text,
-      password: req.body.password,
+    // db.dates.create({
+    //   username: req.body.text,
+    //   password: req.body.password,
       
-    })
+    // })
     
-      .then(function(dbdates) {
-        res.json(dbdates);
+    //   .then(function(dbdates) {
+    //     res.json(dbdates);
         
+    //   });
+      
+      // Sending survey data to DB
+      db.dates.create({
+        answer1: req.body.answer1,
+        answer2: req.body.answer2,
+        answer3: req.body.answer3,
+        answer4: req.body.answer4,
+        answer5: req.body.answer5,
+        answer6: req.body.answer6,
+        answer7: req.body.answer7,
+        answer8: req.body.answer8,
       });
-  });
-
+    });
 
 
   // // DELETE route for deleting posts

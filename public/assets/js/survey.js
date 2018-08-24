@@ -84,19 +84,10 @@ function submitSurvey(){
         answer7:$(answer7),
         answer8:$(answer8),
     };
-  // Sending survey data to DB
-  app.post("/api/dates", newSurvey, function (req, res) {
 
-    db.dates.create({
-      answer1: req.survey.data,
-      answer2: req.survey.data,
-      answer3: req.survey.data,
-      answer4: req.survey.data,
-      answer5: req.survey.data,
-      answer6: req.survey.data,
-      answer7: req.survey.data,
-      answer8: req.survey.data,
-    });
-
-  });
+$.post("/api/dates", newSurvey)
+.then(function(data){
+    console.log(data);
+})
 };
+
