@@ -57,13 +57,14 @@ h1 {
     font-size: 87px;
     color: #b2b2b2;
     margin-top: .5%;
+    text-shadow: 2px 2px pink;
 }
 
 #spinit {
     font-size: 28px;
     font-weight: 500;
     margin-left: 30%;
-    color: #ffbce9;;
+    color: #ffbce9;
     margin-top: 10%;
     text-shadow: 2px 2px #000000;
 
