@@ -14,14 +14,26 @@ function submitName(){
       password: $("#psw").val().trim(),
     };
     window.location.href = "/survey" ;
-  $.post("/api/dates/", newDate, function() {
+  $.post("/api/dates/", newDate, 
+  function() {
       // console.log(dates);
 
-  //  window.location.href = "/survey" ;
+   window.location.href = "/survey" ;
   //  console.log(dates);
   });
 };
-
+  // Update a given post, bring user to the blog page when done
+//   function updatePost(post) {
+//     $.ajax({
+//       method: "PUT",
+//       url: "/api/posts",
+//       data: post
+//     })
+//       .then(function() {
+//         window.location.href = "/blog";
+//       });
+//   };
+// // });
   // Gets post data for a post if we're editing
   // function getPostData(id) {
   //   $.get("/api/date/" + id, function(data) {

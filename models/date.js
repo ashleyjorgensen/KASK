@@ -1,78 +1,98 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   var dates = sequelize.define("dates", {
     username: {
       type: DataTypes.STRING,
-      // allowNull: false,
+      allowNull: false,
       validate: {
         len: [1]
       }
     },
     password: {
       type: DataTypes.STRING,
-      // allowNull: false,
+      allowNull: false,
       validate: {
         len: [1]
       }
     },
     answer1: {
       type: DataTypes.STRING,
-      // allowNull: false,
+      allowNull: true,
       validate: {
         len: [1]
-    }
+      }
     },
-      answer2: {
+    answer2: {
       type: DataTypes.STRING,
-      // allowNull: false,
+      allowNull: true,
       validate: {
         len: [1]
-    }
+      }
     },
-        answer3: {
+    answer3: {
       type: DataTypes.STRING,
-      // allowNull: false,
+      allowNull: true,
       validate: {
         len: [1]
-    }
+      }
     },
-        answer4: {
+    answer4: {
       type: DataTypes.STRING,
-      // allowNull: false,
+      allowNull: true,
       validate: {
         len: [1]
-    }
+      }
     },
-        answer5: {
+    answer5: {
       type: DataTypes.STRING,
-      // allowNull: false,
+      allowNull: true,
       validate: {
         len: [1]
-    }
+      }
     },
-        answer6: {
+    answer6: {
       type: DataTypes.STRING,
-      // allowNull: false,
+      allowNull: true,
       validate: {
         len: [1]
-    }
+      }
     },
-        answer7: {
+    answer7: {
       type: DataTypes.STRING,
-      // allowNull: false,
+      allowNull: true,
       validate: {
         len: [1]
-    }
+      }
     },
-        answer8: {
+    answer8: {
       type: DataTypes.STRING,
-      // allowNull: false,
+      allowNull: true,
       validate: {
         len: [1]
-    }
+//       }
+//     },
+//  }, {
+//       freezeTableName: true, // Model tableName will be the same as the model name
+//       timestamps: false
+//   }),
+  
+//   // timestamps: false
+//   // });
+
+//   return dates;
+// };
+      }
     },
-  });
+
+
+  },
+  // {
+  //   freezeTableName: true,
+  // },
+  {
+    timestamps:false}
+  );
   return dates;
-  };
+};
 // Import ORM to create functions to interact with the DB
 // var orm = require("../config/orm.js");
 
@@ -99,6 +119,6 @@ module.exports = function(sequelize, DataTypes) {
 //       });
 //     }
 //   };
-  
+
   // Export the database functions for the controller (date_controllers.js).
   // module.exports = date;
