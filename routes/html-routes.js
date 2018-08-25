@@ -35,6 +35,8 @@ module.exports = function(app) {
     .then(function (dbdates) {
       console.log(dbdates);
 
+      //setting all these variables locally so we can accees in handlebars
+      //used database connection above to grab answer1-8 from user
       app.locals.something = "date wheel!";
       app.locals.Q1A1 = dbdates.answer1;
       app.locals.Q1A2 = dbdates.answer2;
