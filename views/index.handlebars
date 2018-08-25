@@ -1,68 +1,24 @@
-
-
 <div class="container">
-<div class="row">
-<div class = "col s6">
-{{#each dates}}
-{{!-- {{#unless this.save_date = false}} --}}
-{{!-- <div> --}}
-{{!-- <form action = "/dates/{{this.id}}?_method = PUT" method = "POST">
-<button type = "submit" id = "newDates"> {{this.date_name}} </button>
-</form> --}}
-{{!-- </div> --}}
-{{!-- {{/unless}} --}}
-{{!-- {{/each}} --}}
-{{!-- </div> --}} 
-<h2>Login to DateNight</h2>
-{{!-- <form class= "login-form" > --}}
-{{!-- action="/api/dates/create_account"> --}}
-  <div class="imgcontainer">
-    {{!-- <img src="img_avatar2.png" alt="photo" class="avatar"> --}}
-  </div>
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" id="username" required>
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" id="psw" required>
-         <button class="Submit" id="submitName">Submit</button>
-    {{!-- <button id="submit-form" type="submit">Login</button> --}}
-   
-  </div>
- 
-{{!-- </form> --}}
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="./assets/js/index.js"></script>
-
-<form class="create-user-form" method="POST" action="/api/dates/create_account">
+<form class="create-user-form">
   <h1> Create New User</h1>
-  <input type="email" placeholder="Email Address" id="create_user_email" required>
+  <input type="email" placeholder="Email Address" id="create-user-email" required>
     
-  <input type="password" placeholder="Password" id="create_user_password" required>
+  <input type="password" placeholder="Password" id="create-user-password" required>
   <button type="submit" id="submit-create-user" >Submit</button>
 </form>
-
 <div id="error1">
 <p> </p>
 </div>
-
-
-<form class="sign-in-form" method="POST" action="/api/dates/loginto_account">
+<form class="sign-in-form">
   <h1> Sign In</h1>
-  <input type="email" placeholder="Email Address" id="sign_in_email" required>
-  <input type="password" placeholder="Password" id="sign_in_password" required>
+  <input type="email" placeholder="Email Address" id="sign-in-email" required>
+  <input type="password" placeholder="Password" id="sign-in-password" required>
   <button type="submit" id="button-sign-in"> Submit</button>
 </form>
 <div id="error2">
 <p> </p>
 </div>
-
 <button type="button" id="sign-out">Sign Out</button>
-
 </div>
-
-
 <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
-
-
-
+<script content-type="application/javascript" src="./assets/js/index.js">"JSbeingloaded"</script>

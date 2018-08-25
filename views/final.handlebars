@@ -2,9 +2,10 @@
 <html>
     <head>
         <title>My Winning Wheel</title>
-        <script src='./assets/js/Winwheel.js'></script>
+        <script src='/assets/js/Winwheel.js'></script>
     </head>
     <body>
+        <h1>Title: {{something}}</h1>
         <canvas id='canvas' width='800' height='400'>
         </canvas>
         <script>
@@ -16,19 +17,28 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
  
 <script>
+    var Q1A1 = "{{Q1A1}}";
+    var Q1A2 = "{{Q1A2}}";
+    var Q2A1 = "{{Q2A1}}";
+    var Q2A2 = "{{Q2A2}}";
+    var Q3A1 = "{{Q3A1}}";
+    var Q3A2 = "{{Q3A2}}";
+    var Q4A1 = "{{Q4A1}}";
+    var Q4A2 = "{{Q4A2}}";
+    console.log("For example: "+ Q1A1);
     var myWheel = new Winwheel({
         'numSegments'    : 8,
         'outerRadius'    : 170,
         'segments'       :
         [
-           {'fillStyle' : '#eae56f', 'text' : 'Activity 1'},
-           {'fillStyle' : '#89f26e', 'text' : 'Activity 2'},
-           {'fillStyle' : '#7de6ef', 'text' : 'Activity 3'},
-           {'fillStyle' : '#e7706f', 'text' : 'Activity 4'},
-           {'fillStyle' : '#eae56f', 'text' : 'Activity 5'},
-           {'fillStyle' : '#89f26e', 'text' : 'Activity 6'},
-           {'fillStyle' : '#7de6ef', 'text' : 'Activity 7'},
-           {'fillStyle' : '#e7706f', 'text' : 'Activity 8'}
+           {'fillStyle' : '#eae56f', 'text' : Q1A1},
+           {'fillStyle' : '#89f26e', 'text' : Q1A2},
+           {'fillStyle' : '#7de6ef', 'text' : Q2A1},
+           {'fillStyle' : '#e7706f', 'text' : Q2A2},
+           {'fillStyle' : '#eae56f', 'text' : Q3A1},
+           {'fillStyle' : '#89f26e', 'text' : Q3A2},
+           {'fillStyle' : '#7de6ef', 'text' : Q4A1},
+           {'fillStyle' : '#e7706f', 'text' : Q4A2}
         ],
         'animation' :
         {

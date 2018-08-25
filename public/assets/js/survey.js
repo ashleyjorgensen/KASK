@@ -44,10 +44,12 @@ var surveyJSON =
 function sendDataToServer(survey) {
     //send Ajax request to your web server.
     alert("The results are:" + JSON.stringify(survey.data));
+    $.post("/api/results", {data: survey.data} );
 }
+
 $(document).on("click", "#newDates", submitSelections);
 function submitSelections(){
-   window.location.href = "/results" ;
+   window.location.href = "/results/"+uid ;
    console.log("working");
 };
 
@@ -64,9 +66,9 @@ survey.onValidateQuestion.add(function(survey, options){
       if(options.value && options.value.length > 2) {
         //Set the error
         options.error = "Please select maximum two values"; 
-      console.log(options.name);
-      console.log(options.value);
-      console.log(options.value.length);
+        console.log(options.name);
+        console.log(options.value);
+        console.log(options.value.length);
       }
     }
 });
