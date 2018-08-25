@@ -1,1 +1,39 @@
-<h1>Datenight!</h1>
+<html>
+<head>
+    <title>index</title>
+   <link rel="stylesheet" href="/assets/css/styles.css" type="text/css" />
+    
+</head>
+<body>
+<div class="welcome"> 
+    <h5>DateNight </h5>
+    <h7> Having a hard time picking the perfect date for you and your partner? 
+DateNight makes your decision easy!
+Just login below to get started. 
+</h7>
+</div>
+<div class="container">
+    <form class="create-user-form">
+        <h1> Create New User</h1>
+        <input type="email" placeholder="Email Address" id="create-user-email" required>
+        <input type="password" placeholder="Password" id="create-user-password" required>
+        <button type="submit" id="submit-create-user">Submit</button>
+    </form>
+    <div id="error1">
+        <p> </p>
+    </div>
+    <form class="sign-in-form">
+        <h1> Sign In</h1>
+        <input type="email" placeholder="Email Address" id="sign-in-email" required>
+        <input type="password" placeholder="Password" id="sign-in-password" required>
+        <button type="submit" id="button-sign-in"> Submit</button>
+    </form>
+    <div id="error2">
+        <p> </p>
+    </div>
+    <button type="button" id="sign-out">Sign Out</button>
+</div>
+<script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+<script content-type="application/javascript" src="./assets/js/index.js">"JSbeingloaded"</script>
+</body>
+</html>
