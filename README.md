@@ -2,6 +2,10 @@
 
 An app that turns those "I don't know's" into decisions when picking something to do for date night. 
 
+## Purpose
+
+After logging into the app, you will need to answer a 4 question questionnaire based one which you activirt or food you prefer. Please select two answers for each question. Our server then takes puts your answers into our database, which is then put into our winwheel. Once your answers are in our winwheel, click the spin button and DateNight will select a random activity for you and your friend or significant other to partake in. 
+
 ## Getting Started
 
 Heroku link goes here
@@ -19,42 +23,20 @@ Please install the following NPM packages:
 * sequelize
 * node.js
 
-### Technologies Used
+### Built WIth
 ```
+* JavaScript
+* Handlebars
+* Bootstrap
+* HTML
+* CSS
+* Surveyio.js library
+* Winwheel Library
 
-
-
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Katri Morrison-Goulias
+* Ashley Jorgensen
+* Stefani Krautstrunk
+* Keith Jones
