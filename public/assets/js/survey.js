@@ -35,7 +35,7 @@ var surveyJSON =
                 name: "question4",
                 title: "Which two types of food appeal to you the most?",
                 choices:
-                    ["Italian", "Mexican", "Hawaiian", "Mongolion", "Chinese", "Thai", "Western", "German", "Bar Food", "Seafood"],
+                    ["Italian Food", "Mexican Food", "Hawaiian Food", "Mongolion Food", "Chinese Food", "Thai Food", "American Food", "German Food", "Bar Food", "Seafood"],
                 choicesOrder: "asc", colCount: 2
             }]
     }]
