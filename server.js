@@ -50,15 +50,14 @@ app.listen(PORT, function() {
 
 // var router = require("router");
 
-if (process.env.JAWS_DB) {
-    connection = mysql.createConnection(process.env.JAWSDB_URL);
+// if (process.env.JAWS_DB) {
+//     connection = mysql.createConnection(process.env.JAWSDB_URL);
 
-} else {
-    connection = mysql.createConnection({
-        host: 'localhost',
-        user: "root",
-        password:"",
-        database: "datenight_db"
-    });
-};
-
+// } else {
+//     connection = mysql.createConnection({
+//         host: 'localhost',
+//         user: "root",
+//         password:"",
+//         database: "datenight_db"
+//     });
+// };
