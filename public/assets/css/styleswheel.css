@@ -24,9 +24,8 @@ html {
   text-shadow: 2px 2px pink;
 }
 h1 {
-  color: #838080;
-  margin-top: .5%;
-  text-shadow: 2px 2px pink;
+  color: rgba(189, 114, 104, 0);
+  
 }
 #spinit {
   font-size: 28px;
@@ -107,5 +106,12 @@ p{
     font-size: 15px;
 }
 #spin-results{
-    color: #f8cbe0;
+    color: #ffffff;
+    margin: auto;
+    padding-top: 5px;
+    width: 50%;
+    background-color:#eea77d;
+    height:35px;
+    font-size:20px;
+    letter-spacing: .3px;
 }
