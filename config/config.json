@@ -1,10 +1,13 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password":"rootroot",
+=======
+    "password": "",
+>>>>>>> 1502a0a29f8b783ebba6878234fb5fe8e91238d9
     "database": "datenight_db",
     "host": "127.0.0.1",
-    "port": 3306,
     "dialect": "mysql"
   },
   "test": {
@@ -12,7 +15,6 @@
     "password": "",
     "database": "datenight_db",
     "host": "127.0.0.1",
-    "port": 3306,
     "dialect": "mysql"
   },
   "production": {

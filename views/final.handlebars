@@ -1,5 +1,6 @@
 
 <html>
+<<<<<<< HEAD
     <head>
         <title>My Winning Wheel</title>
         <script src='/assets/js/Winwheel.js'></script>
@@ -51,41 +52,111 @@
  
             // During the animation need to call the drawTriangle() to re-draw the pointer each frame.
             'callbackAfter' : 'drawTriangle()'
-        }
-    });
- 
-    // This function called after the spin animation has stopped.
-    function alertActivity()
-    {
-        // Call getIndicatedSegment() function to return pointer to the segment pointed to on wheel.
-        var activitySegment = myWheel.getIndicatedSegment();
- 
-        // Basic alert of the segment text which is the prize name.
-        alert("The Activity you should go on is " + activitySegment.text + "!");
-    }
- 
-    // Function to draw pointer using code (like in a previous tutorial).
-    drawTriangle();
- 
-    function drawTriangle()
-    {
-        // Get the canvas context the wheel uses.
-        var ctx = myWheel.ctx;
- 
-        ctx.strokeStyle = 'navy';     // Set line colour.
-        ctx.fillStyle   = 'black';     // Set fill colour.
-        ctx.lineWidth   = 2;
-        ctx.beginPath();              // Begin path.
-        ctx.moveTo(400, 50);           // Move to initial position.
-        ctx.lineTo(310, 10);           // Draw lines to make the shape.
-        ctx.lineTo(490, 10);
-        ctx.lineTo(400, 50);
-        ctx.stroke();                 // Complete the path by stroking (draw lines).
-        ctx.fill();                   // Then fill.
-    }
- 
-</script>
+=======
 
-<button onClick="myWheel.startAnimation();">Spin the Wheel</button>
-    </body>
+<head>
+    <title>My Winning Wheel</title>
+    <script src='/assets/js/Winwheel.js'></script>
+    <link rel="stylesheet" href="/assets/css/styleswheel.css" type="text/css" />
+</head>
+
+<body>
+    <h1>Spin your {{something}}</h1>
+    <canvas id='canvas' width='800' height='400'>
+    </canvas>
+    <script>
+        var theWheel = new Winwheel();
+    </script>
+    <br>
+    </canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+
+    <script>
+        //accessing the variables we set locally in html-routes
+        var Q1A1 = "{{Q1A1}}";
+        var Q1A2 = "{{Q1A2}}";
+        var Q2A1 = "{{Q2A1}}";
+        var Q2A2 = "{{Q2A2}}";
+        var Q3A1 = "{{Q3A1}}";
+        var Q3A2 = "{{Q3A2}}";
+        var Q4A1 = "{{Q4A1}}";
+        var Q4A2 = "{{Q4A2}}";
+        console.log("For example: " + Q1A1);
+        var myWheel = new Winwheel({
+            'numSegments': 8,
+            'outerRadius': 170,
+            'segments':
+                [
+                    { 'fillStyle': '#ea926f', 'text': Q1A1},
+                    { 'fillStyle': '#f8cbe0', 'text': Q1A2 },
+                    { 'fillStyle': '#f5d79f', 'text': Q2A1 },
+                    { 'fillStyle': '#ea926f', 'text': Q2A2 },
+                    { 'fillStyle': '#f5d79f', 'text': Q3A1 },
+                    { 'fillStyle': '#f8cbe0', 'text': Q3A2 },
+                    { 'fillStyle': '#f5d79f', 'text': Q4A1 },
+                    { 'fillStyle': '#f8cbe0', 'text': Q4A2 }
+                ],
+            'animation':
+            {
+                'type': 'spinToStop',
+                'duration': 10,
+                'spins': 8,
+
+                // Remember to do something after the animation has finished specify callback function.
+                'callbackFinished': 'alertActivity()',
+
+                // During the animation need to call the drawTriangle() to re-draw the pointer each frame.
+                'callbackAfter': 'drawTriangle()'
+            }
+        });
+
+        // This function called after the spin animation has stopped.
+        function alertActivity() {
+            // Call getIndicatedSegment() function to return pointer to the segment pointed to on wheel.
+            var activitySegment = myWheel.getIndicatedSegment();
+
+            $("#spin-results").text("YOUR DATE: " + activitySegment.text + " !");
+
+            // Basic alert of the segment text which is the prize name.
+             //alert("The Activity you should go on is " + activitySegment.text + "!");
+           
+        }
+
+        // Function to draw pointer using code (like in a previous tutorial).
+        drawTriangle();
+
+        function drawTriangle() {
+            // Get the canvas context the wheel uses.
+            var ctx = myWheel.ctx;
+
+            ctx.strokeStyle = 'black';     // Set line colour.
+            ctx.fillStyle = 'white';     // Set fill colour.
+            ctx.lineWidth = 2;
+            ctx.beginPath();              // Begin path.
+            ctx.moveTo(400, 50);           // Move to initial position.
+            ctx.lineTo(310, 10);           // Draw lines to make the shape.
+            ctx.lineTo(490, 10);
+            ctx.lineTo(400, 50);
+            ctx.stroke();                 // Complete the path by stroking (draw lines).
+            ctx.fill();                   // Then fill.
+>>>>>>> 1502a0a29f8b783ebba6878234fb5fe8e91238d9
+        }
+
+    </script>
+
+    <div class="spin-div">
+
+        <button id="spin-wheel" onClick="myWheel.startAnimation();"><p>SPIN THE WHEEL!</p></button>
+        <h3>Spin the wheel to randomly pick the perfect activity for you and your date!</h3>
+    </div>
+    {{!-- this button should work for the wheel to sign out, but it doesn't: --}} {{!-- <button type="button" id="sign-out">Sign
+        Out
+    </button> --}}
+
+<div id="spin-results">
+    
+</div>
+
+</body>
+
 </html>
