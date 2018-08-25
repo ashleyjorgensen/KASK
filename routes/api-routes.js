@@ -62,7 +62,24 @@ module.exports = function(app) {
         
       // });
   });
+//   app.post("/api/dates/pull", function(req, res) {
 
+//     // console.log(req.body);
+//     // console.log(req.body.username);
+
+// // Post.findAll({
+// //   where: {
+// //     authorId: 2
+// //   }
+// // });
+      
+//     })
+    
+      // .then(function(dbdates) {
+      //   res.json(dbdates);
+        
+      // });
+  // });
   // // DELETE route for deleting posts
   // app.delete("/api/posts/:id", function(req, res) {
   //   db.dates.destroy({
