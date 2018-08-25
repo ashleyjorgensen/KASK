@@ -6,9 +6,9 @@ USE datenight_db;
 CREATE TABLE dates
 (
     id int(50) NOT NULL AUTO_INCREMENT,
-    username varchar(255) NOT NULL,
-    password varchar(255)  NOT NULL,
-    uid varchar(255) NOT NULL,
+    username varchar(255) NULL,
+    password varchar(255)  NULL,
+    uid varchar(255) NULL,
     answer1 varchar(255) NULL,
     answer2 varchar(255) NULL,
     answer3 varchar(255) NULL,
@@ -19,4 +19,3 @@ CREATE TABLE dates
     answer8 varchar(255) NULL,
     PRIMARY KEY (id)
 );
-
