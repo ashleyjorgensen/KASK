@@ -1,23 +1,24 @@
-<h1>Datenight!</h1>
-
-<main>
 <div class="container">
-<div class="row">
-<div class = "col s6'>
-{{#each dates}}
-{{!-- {{#unless this.save_date = false}} --}}
-<div>
-<form action = "/dates/{{this.id}}?_method = PUT" method = "POST">
-<button type = "submit" id = "newDates"> {{this.date_name}} </button>
+<form class="create-user-form">
+  <h1> Create New User</h1>
+  <input type="email" placeholder="Email Address" id="create-user-email" required>
+    
+  <input type="password" placeholder="Password" id="create-user-password" required>
+  <button type="submit" id="submit-create-user" >Submit</button>
 </form>
+<div id="error1">
+<p> </p>
 </div>
-{{!-- {{/unless}} --}}
-{{/each}}
+<form class="sign-in-form">
+  <h1> Sign In</h1>
+  <input type="email" placeholder="Email Address" id="sign-in-email" required>
+  <input type="password" placeholder="Password" id="sign-in-password" required>
+  <button type="submit" id="button-sign-in"> Submit</button>
+</form>
+<div id="error2">
+<p> </p>
 </div>
-
-<li>
-    {{name}}
-    <button class="declineDate" data-id="{{id}}" data-newDate="{{dates}}">
-    </button>
-    <button class="rejectDate" data-id="{{this.id}}">Reject Date</button>
-</li>
+<button type="button" id="sign-out">Sign Out</button>
+</div>
+<script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+<script content-type="application/javascript" src="./assets/js/index.js">"JSbeingloaded"</script>
