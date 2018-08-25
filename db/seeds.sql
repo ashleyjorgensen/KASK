@@ -1,12 +1,6 @@
 
-INSERT INTO dates (date_name, save_date) VALUES ('Movie Night', true);
-INSERT INTO dates (date_name, save_date) VALUES ('Italian Dinner', true);
-INSERT INTO dates (date_name, save_date) VALUES ('Karaoke');
-INSERT INTO dates (date_name, save_date) VALUES ('Sake Bombing', true);
-INSERT INTO dates (date_name, save_date) VALUES ('Mexican Feast', true);
-INSERT INTO dates (date_name, save_date) VALUES ('Wine, Cook Dinner, & Netflix', true);
-INSERT INTO dates (date_name, save_date) VALUES ('Get Ice Cream', true);
-INSERT INTO dates (date_name, save_date) VALUES ('Try a New Restaurant', true);
-INSERT INTO dates (date_name, save_date) VALUES ('Order Takeout', true);
-INSERT INTO dates (date_name, save_date) VALUES ('American Meal', true);
-INSERT INTO dates (date_name, save_date) VALUES ('Walk Around Downtown', true);
+INSERT INTO dates (username, password, uid, answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8) VALUES ("ashley@gmail.com", "123456", "IDRMD1g2zDWd2J41sXE8LUuf4UO2", "hiking" , "bike riding", "fishing", "cooking together", "board game night", "drinking games", "day trip", "mexican");
+INSERT INTO dates (username, password, uid, answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8)  VALUES ("keith@gmail.com", "123456", "8z2vS26EbIguM6PYmCwa3PJdTjZ2", "fishing", "basketball", "kayaking", "drinking games", "card game", "concert", "bar hopping", "bar food");
+INSERT INTO dates (username, password, uid, answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8)  VALUES ("katri@gmail.com", "123456", "IJsB6Y4yuOdYu7nRIYpjQlPGxhf1", "star gazing", "paddle boarding", "build a fort", "puzzles", "fondue night", "clubbing", "concert", "thai");
+INSERT INTO dates (username, password, uid, answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8) VALUES ("stefani@gmail.com", "123456" , "UkNJsBvTUjdv6U5t6qJEzFpJkPl2", "miniature golf", "rock climbing", "bake together", "card game", "drinking games", "concert", "day trip", "italian");
+

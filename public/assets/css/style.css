@@ -1,0 +1,89 @@
+body, 
+html {
+    height: 132%;
+    background-image: url(../images/background2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #9e1f1fa8;
+    
+}
+/* the submit button for the survey */
+#newDates {
+  margin-bottom: 1%;
+  border-radius: 25px;
+  padding: 12px; 
+  width: 14%;
+  height: 12%; 
+  background: #efe3cb;
+  border: 0px;
+  font-size: 20px;
+  margin-left: 40%;
+  color: #9e1f1fa8;
+  text-shadow: 2px 2px pink;
+}
+h1 {
+  color: #838080;
+  margin-top: .5%;
+  text-shadow: 2px 2px pink;
+}
+#spinit {
+  font-size: 28px;
+  font-weight: 500;
+  margin-left: 30%;
+  color: #ffbce9;
+  margin-top: 10%;
+  text-shadow: 2px 2px #000000;
+}
+#spinning {
+  margin-left: 42%;
+  margin-bottom: 1%;
+  border-radius: 25px;
+  padding: 12px; 
+  width: 12%;
+  height: 12%; 
+  background: #efe3cb;
+  border: 0px;
+  font-size: 36px;
+  font-family: 'Great Vibes', cursive;
+}
+.spinContainer{
+  margin-top:5%;
+}
+.two {
+  color: #eea29a;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 24px;
+}
+#canvas {
+  margin-left: 20%;
+}
+/* my css for the login page */
+.container {   
+    margin: auto;
+    width: 60%;
+    border: 3px solid rgba(189, 114, 104, 0.582);
+    padding: 10px;
+    background: rgba(252, 220, 205, 0.808);
+    margin-bottom:40px;
+}
+body{
+  background-image: url("datenight.jpg");
+}
+h6 {
+  color: rgba(235, 55, 55, 0.822);
+  margin-top: 4%;
+  text-shadow: 2px 2px pink;
+  font-size: 40px;
+  
+}
+.welcome{
+  margin: auto;
+  width: 60%;
+  padding: 2px;
+ 
+}
+#surveyContainer{
+  font-size:20px;
+}
